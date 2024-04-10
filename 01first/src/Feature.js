@@ -15,9 +15,9 @@ function Feature() {
                 <Type message="Customer Support"/>
                 <Type message="Creative Design"/>
             </div>
-
         </div>
     </div>
+    
   )
 }
 

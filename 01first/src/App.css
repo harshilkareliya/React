@@ -88,6 +88,7 @@
     position: relative;
     transition: 1s;
     margin-top: 10px;
+    z-index: 1;
 }
 .thingtext button::before{
     content: "";
@@ -100,11 +101,12 @@
     top: 0;
     left: 0;
     transition: 0.5s;
+    z-index: 2000;
 }
 .thingtext button:hover::before{
     width: 100%;
-    opacity: 0;
-    border-radius: 35px;
+    opacity: 0s;
+    border-radius: 35px 35px 35px 35px;
 
 }
 .thingtext i{
@@ -122,6 +124,7 @@
     /* width: 100%; */
     /* border: 1px solid black;  */
     display: flex;
+    margin-bottom: 150px;
 }
 .featurepic{
     width: 35%;
@@ -165,6 +168,7 @@
     line-height: 30px;
     letter-spacing: 0.5px;
     word-spacing: 2px;
+    color: gray;
 }
 .typetext{
     padding-left: 20px;
@@ -172,4 +176,29 @@
 }
 .typetext h2{
     margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+
+/* Help Componenets */
+.help{
+    background-color: #f4feff;
+    padding: 200px 80px;
+    text-align: center;
+}
+.help h1{
+    font-size: 55px;
+    font-weight: 600;
+}
+.helpType{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    border: 1px solid black;
+}
+.helpBox{
+    height: 400px;
+    width: 31%;
+    border: 1px solid black;
 }
