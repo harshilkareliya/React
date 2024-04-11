@@ -153,7 +153,6 @@
     flex-basis: 50%;
     /* border: 1px solid black; */
     padding: 30px 5px;
-
 }
 .type i{
     /* border: 1px solid black; */
@@ -198,7 +197,23 @@
     border: 1px solid black;
 }
 .helpBox{
-    height: 400px;
+    height: 500px;
     width: 31%;
     border: 1px solid black;
+}
+.iconBox{
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+}
+.iconBox i{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 19px 30px;
+    font-size: 50px;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    background-color: #D852E8;
+    color: white;
 }
