@@ -1,5 +1,5 @@
 import React from 'react'
-
+import dots from './img/dots.png'
 function Help() {
   return (
     <div className='help'>
@@ -19,6 +19,8 @@ function Box(val){
     <div className='helpBox'> 
       <div className='iconBox'>
         <i className={val.icon}></i>
+        <img src={dots} className='iconBg'></img>
+        
       </div>
       <h2>{val.msg}</h2>
     </div>

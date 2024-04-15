@@ -9,7 +9,7 @@ function Test() {
       let responce = await fetch('https://restcountries.com/v3.1/all')
       // let responce = await fetch('https://fakestoreapi.com/products')
       let jsonData = await responce.json()
-      console.log(jsonData)
+      console.log(jsonData) 
     }
     fetching()
   },[])

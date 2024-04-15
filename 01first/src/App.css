@@ -200,6 +200,7 @@
     height: 500px;
     width: 31%;
     border: 1px solid black;
+    background-color: white;
 }
 .iconBox{
     height: 200px;
@@ -216,4 +217,8 @@
     left: 35%;
     background-color: #D852E8;
     color: white;
+}
+.iconBg{
+    /* background-color: white; */
+
 }
