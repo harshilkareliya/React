@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Things from './Things';
 import Feature from './Feature';
 import Help from './Help';
+import Download from './Download';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Things/>
     <Feature/>
     <Help/>
+    <Download/>
     </>
       
   );

@@ -1,0 +1,173 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(230, 229, 229);
+  /* background-color: black; */
+}
+
+.header{
+  height: 50px;
+  margin-top: 10px;
+  /* border: 1px solid black; */
+  line-height: 45px;
+}
+.header div{
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  background-color: white;
+
+}
+.header input{
+  border: none;
+}
+
+#modeChanger{
+  font-size: 22px;
+  margin: 0px 5px;
+}
+#modeChanger{
+  cursor: pointer;
+}
+
+
+.main{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
+.leftPanel{
+  width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  height: 77vh;
+}
+.lpUl{
+}
+.lpUl li{
+  font-weight: bold;
+  margin: 20px 0px;
+  height: 30px;
+  list-style: none;
+  cursor: pointer;
+  /* border: 1px solid black; */
+}
+
+
+
+.mainMiddle{
+  max-height: 77vh;
+  overflow-y: auto;
+}
+.mainMiddle::-webkit-scrollbar{
+  display: none;
+}
+
+.middlePanel{
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  /* overflow: scroll; */
+  height: 96%;
+  margin-bottom: 4%;
+  padding: 20px;
+}
+.mpHeader{
+  height: 80px;
+  /* border: 1px solid black; */
+  align-items: center;
+  display: flex;
+}
+.mpHeader img{
+  height: 95%;
+  width: 12%;
+  border: 3px solid yellow;
+  border-radius: 50%;
+}
+.mpHeader span{
+  width: 85%;
+  line-height: 22px;
+  margin-left: 12px;
+}
+.mpHeader span strong{
+  font-size: 26px;
+}
+.menuIcon{
+  /* border: 1px solid black; */
+  font-size: 20px;
+  cursor: pointer;
+}
+.mpMimgsec{
+  height: 65%;
+  align-items: center;
+}
+.mpMimg{
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.mpFooter{
+  height: 50px;
+  align-items: center;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.mpFooter span{
+  cursor: pointer;
+}
+
+
+
+
+
+.rightPanel{
+  width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 77vh;
+  overflow-y: auto;
+  /* overflow: hidden; */
+}
+.rightPanel::-webkit-scrollbar{
+  display: none;
+}
+
+.RpBox{
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  /* background-image: url(https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_640.jpg); */
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 10px;
+}
+.RpBoxfooter{
+  width: 85%;
+  height: 50px ;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  display: flex;
+  z-index: 1;
+  color: white;
+  opacity: 100%;
+}
+.RpBoxfooter img{
+  width: 30%;
+  height: 110%;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  margin-right: 10px;
+}
+.RpBoxfooter p strong{
+  font-size: 22px;
+}
