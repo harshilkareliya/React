@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 15px;
+}
+
+.mainVideo {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Set the height of the container */
+  overflow: hidden; /* Ensure the video doesn't overflow */
+}
+
+.content {
+  position: relative; /* Set the content to position relative */
+  z-index: 1; /* Ensure content is above the video */
+  padding: 20px;
+  text-align: center;
+  color:  white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set the width to fill the container */
+  height: inherit; /* Set the height to fill the container */
+  object-fit: cover; /* Ensure the video covers the entire area */
+  z-index: 0; /* Set the z-index to a value lower than the content */
+}

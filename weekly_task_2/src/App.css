@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    display: flex;
+}
+.left{
+    flex-basis: 19% ;
+}
+.leftPanel{
+    height: 100vh;
+    padding: 5px 8px;
+}
+.user{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;   
+}
+.user_logo{
+    width: 23%;
+    /* height: 60px; */
+}
+
+
+
+.main{
+    flex-basis: 81%;
+}
+/* Main Panel */
+.mainPanel{
+    width: 100%;
+    height: 100vh;
+}
+/* My Day */
+.myDay{
+    height: 100%;
+    padding: 30px;
+    background-color: #FF76CE;
+}
+.myDayHeader{
+    position: relative;
+    height: 80px;
+    border: 1px solid black;
+}
+.themeOption{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    transform: rotate(90deg);
+    /* background-color: gainsboro; */
+    padding: 0px 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.themeOption:hover{
+    background-color: gainsboro;
+}
+.themePlate{
+    position: absolute;
+    top: 73px;
+    right: 30px;
+    width: 350px;
+    padding: 25px;
+    background-color: white;
+}
+.themeTable{
+    width: 300px;
+    /* display: flex; */
+}
+.tableRow{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.tableCol{
+    height: 50px;
+    width: 18%;
+    border: 1px solid black;
+    transition: 0.5s;
+    background-size: cover;
+}
+.tableCol:hover{
+    transform: scale(1.1);
+}
+
+
