@@ -1,138 +1,97 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 body{
-  background-color: rgb(230, 229, 229);
-  /* background-color: black; */
+  background-color: black;
+  color: white;
+  font-family: cera-round-pro, "Helvetica Neue","Helvetica","Arial","sans-serif";
 }
 
-.header{
-  height: 50px;
-  margin-top: 10px;
-  /* border: 1px solid black; */
-  line-height: 45px;
-}
-.header div{
-  /* border: 1px solid black; */
-  border-radius: 5px;
-  background-color: white;
-
-}
-.header input{
-  border: none;
-}
-
-#modeChanger{
-  font-size: 22px;
-  margin: 0px 5px;
-}
-#modeChanger{
-  cursor: pointer;
-}
-
-
-.main{
+#logIn{
+  width: 400px;
+  height: 680px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://cdn.pixabay.com/photo/2023/04/29/20/23/ai-generated-7959248_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 1px 5px 1px lightgray;
 }
 
-
-.leftPanel{
-  width: 20%;
-  background-color: white;
-  border-radius: 10px;
-  height: 77vh;
-}
-.lpUl{
-}
-.lpUl li{
-  font-weight: bold;
-  margin: 20px 0px;
-  height: 30px;
-  list-style: none;
-  cursor: pointer;
-  /* border: 1px solid black; */
-}
-
-
-
-.mainMiddle{
-  max-height: 77vh;
-  overflow-y: auto;
-}
-.mainMiddle::-webkit-scrollbar{
-  display: none;
-}
-
-.middlePanel{
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-  /* overflow: scroll; */
-  height: 96%;
-  margin-bottom: 4%;
-  padding: 20px;
-}
-.mpHeader{
-  height: 80px;
-  /* border: 1px solid black; */
-  align-items: center;
+#signupbtn{
   display: flex;
-}
-.mpHeader img{
-  height: 95%;
-  width: 12%;
-  border: 3px solid yellow;
-  border-radius: 50%;
-}
-.mpHeader span{
-  width: 85%;
-  line-height: 22px;
-  margin-left: 12px;
-}
-.mpHeader span strong{
-  font-size: 26px;
-}
-.menuIcon{
-  /* border: 1px solid black; */
-  font-size: 20px;
-  cursor: pointer;
-}
-.mpMimgsec{
-  height: 65%;
   align-items: center;
-}
-.mpMimg{
-  width: 90%;
-  height: 100%;
-  margin-left: 5%;
-  border-radius: 10px;
-  border: 2px solid black;
-}
-.mpFooter{
-  height: 50px;
-  align-items: center;
-  /* border: 1px solid black; */
-  display: flex;
   justify-content: space-evenly;
-}
-.mpFooter span{
-  cursor: pointer;
+  flex-direction: column;
 }
 
+#signupbtn button{
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 30px;
+}
 
 
+#nav{
+  background-color: rgb(57, 56, 56);
+}
 
+/* App.css */
+
+.app {
+  width: 100%;
+}
+
+.light {
+  /* background-color: #ffffff; */
+  color: #000000;
+}
+
+.dark {
+  background-color: #fffafa;
+  color: #000000;
+}
+
+
+#sidebar{
+  height: 90vh;
+  background-color: rgb(57, 56, 56);
+
+}
+
+#list{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.icon{
+  margin-right: 10px;
+}
+
+.items{
+  padding: 18px;
+  font-size: 18px;
+}
+
+::placeholder{
+  color: white;
+}
+
+#post{
+  background-color: rgb(57, 56, 56);
+}
+
+/*right panel */
 
 .rightPanel{
-  width: 20%;
-  background-color: white;
+  background-color: rgb(57, 56, 56);
+
+  /* background-color: white; */
   border-radius: 10px;
   padding: 20px;
-  max-height: 77vh;
+  max-height: 100vh;
   overflow-y: auto;
   /* overflow: hidden; */
 }
@@ -150,8 +109,9 @@ body{
   z-index: 0;
   margin-bottom: 10px;
 }
+
 .RpBoxfooter{
-  width: 85%;
+  width: 80%;
   height: 50px ;
   position: absolute;
   bottom: 15px;
@@ -171,3 +131,4 @@ body{
 .RpBoxfooter p strong{
   font-size: 22px;
 }
+
