@@ -1,9 +1,52 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function MyAbout() {
+function Header() {
     return (
-        <div>
+        <>
 
+            <header id="header">
+                <div class="container">
+
+                    <h1><a href="index.html">Emily Jones</a></h1>
+                    {/* <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> --> */}
+                    <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
+
+                
+                    {/* <nav id="navbar" class="navbar">
+                    <ul>
+                        <Link to="/" class="nav-link active" href="google.com">Home</Link>
+                        <Link to="/MyAbout" class="nav-link" href="">About</Link>
+                        <Link to="/Resume" class="nav-link" href="#resume">Resume</Link>
+                        <Link to="/Service" class="nav-link" href="#services">Services</Link>
+                        <Link to="/Portfolio" class="nav-link" href="#portfolio">Portfolio</Link>
+                        <Link to="/Contact" class="nav-link" href="#contact">Contact</Link>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav> */}
+
+                    <nav id="navbar" className="navbar">
+                        <ul>
+                            <li><Link to="/" className="nav-link">Home</Link></li>
+                            <li><Link to="/MyAbout" className="nav-link">About</Link></li>
+                            <li><Link to="/Resume" className="nav-link">Resume</Link></li>
+                            <li><Link to="/Service" className="nav-link">Services</Link></li>
+                            <li><Link to="/Portfolio" className="nav-link">Portfolio</Link></li>
+                            <li><Link to="/Contact" className="nav-link">Contact</Link></li>
+                        </ul>
+                        <i className="bi bi-list mobile-nav-toggle"></i>
+                    </nav>
+
+                    <div class="social-links">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+
+                </div>
+            </header>
             <section id="about" class="about">
 
                 <div class="about-me container">
@@ -51,7 +94,7 @@ function MyAbout() {
                 </div>
                 {/* <!-- End About Me -->
 
-    <!-- ======= Counts ======= --> */}
+<!-- ======= Counts ======= --> */}
                 <div class="counts container">
 
                     <div class="row">
@@ -93,7 +136,7 @@ function MyAbout() {
                 </div>
                 {/* <!-- End Counts -->
 
-    <!-- ======= Skills  ======= --> */}
+<!-- ======= Skills  ======= --> */}
                 <div class="skills container">
 
                     <div class="section-title">
@@ -157,7 +200,7 @@ function MyAbout() {
                 </div>
                 {/* <!-- End Skills -->
 
-    <!-- ======= Interests ======= --> */}
+<!-- ======= Interests ======= --> */}
                 <div class="interests container">
 
                     <div class="section-title">
@@ -331,11 +374,9 @@ function MyAbout() {
                 {/* <!-- End Testimonials  --> */}
 
             </section>
+        </>
 
-
-
-        </div>
     )
 }
 
-export default MyAbout
+export default Header

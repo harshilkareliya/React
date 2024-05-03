@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+body{
+  background-color: #f2f2f2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#registration-form {
+  height: 100vh;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Vet942YnP45G3xfscvTp-BmFgnpl0gwJRRLlxDNiXQ&s");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  width: 350px;
+  /* height: 450px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: url();
+}
+
+form h4 {
+  color: rgb(26, 26, 90);
+}
+
+.swing {
+  animation: swing ease-in-out 5s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin-left: 60px;
+}
+
+.swing:hover{
+  animation: normal;
+}
+
+.swing:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 52%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}
+
+.swing:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+img {
+  width: 280px;
+  height: 400px;
+  margin-top: 339px;
+}
+
+input {
+  background-color: transparent !important;
+}
+
+.font-size-10px {
+  font-size: 10px;
+}
+
+.font-size-15px{
+  font-size: 15px;
+}
+
+#info {
+  background-color: #5a5c27;
+}
+
+#logo-sec {
+  background-color: #7d8035;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+select {
+  background: none;
+  color: white;
+  border: #5a5c27;
+}
+
+option{
+  color: #000;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.dropend .dropdown-toggle {
+  color: salmon;
+  margin-left: 1em;
+}
+
+
+.dropdown-item:hover {
+  background-color: lightsalmon;
+  color: #fff;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropend:hover>.dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+.products{
+  height: auto;
+  justify-content: space-evenly;
+}
+
+.product{
+  margin-bottom: 20px;
+  width: 360px;
+  height: auto;
+}
+
+.dropdown {
+  position: absolute;
+  top: 12%;
+  right: 90px;
+  background-color: rgba(37, 30, 30, 0.63);
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.dropdown a{
+  /* text-align: left; */
+  padding: 10px 0px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.dropdown a:hover{
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 10px;
+}
+
+.dropdown button{
+  background-color: #5a5c27;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+@media screen and (min-width: 769px) {
+  .dropend:hover>.dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  .dropend .dropdown-toggle {
+    margin-left: 0.5em;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+      
