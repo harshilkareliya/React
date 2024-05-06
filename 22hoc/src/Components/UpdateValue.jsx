@@ -9,6 +9,7 @@ function UpdateValue(Products) {
         }
         function remove() {
             if (quantity != 0) setQuantity(quantity - 1)
+                
             else {
                 setQuantity(0)
                 alert('Please! add Quntity')
