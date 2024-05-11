@@ -1,0 +1,13 @@
+.showTasks{
+    display: flex;
+    align-items: center;
+}
+.showTasks h1{
+    width: 80%;
+}
+.showTasks span{
+    /* height: 50px; */
+    width: 5%;
+    font-size: 20px;
+    cursor: pointer;
+}
