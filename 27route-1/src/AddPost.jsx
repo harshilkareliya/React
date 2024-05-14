@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-function AddPost() {
+function AddPost({addPost}) {
 
     const [title, settitle] = useState('')
     const [discription, setdiscription] = useState('')
     const navigate = useNavigate()
 
-    function addPost(e) {
+    function addPostthis(e) {
         e.preventDefault();
-
+        addPost(title, discription);
 
         navigate('/')
-        settitle('');
-        setdiscription('');
     }
     return (
         <div>
@@ -25,7 +23,7 @@ function AddPost() {
                             <div className="card shadow-2-strong card-registration" style={{ borderRadius: '15px' }}>
                                 <div className="card-body p-4 p-md-5">
                                     <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">ADD POST HERE</h3>
-                                    <form onSubmit={addPost}>
+                                    <form onSubmit={addPostthis}>
 
                                         <div className="row">
                                             <div className="col-md-12 mb-4">
@@ -41,9 +39,9 @@ function AddPost() {
                                             </div>
                                         </div>
 
-                                        {/* <div className="mt-4 pt-2 text-center"> */}
+                                        <div className="mt-4 pt-2 text-center">
                                         <button className="btn btn-primary btn-lg" type='submit'> Add Post</button>
-                                        {/* </div> */}
+                                        </div>
 
                                     </form>
                                 </div>
