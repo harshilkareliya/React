@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Uncontrolled from './Uncontrolled';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
+import './App.css';
+import Instagram from './Instagram';
 
 function App() {
   return (
     <div className="App">
-      <Uncontrolled/>
+      <Instagram/>
     </div>
   );
 }
