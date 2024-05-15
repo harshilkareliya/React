@@ -108,6 +108,59 @@
 }
 
 
+.post{
+  height: auto;
+  width: 65%;
+  /* border: 1px solid black; */
+  text-align: left;
+}
+.postHeader{
+  height: 70px;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+.postProfile{
+  min-height: 40px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 10px;
+  padding: 2.5px;
+  cursor: pointer;
+}
+.postProfile img{
+  height: 40px;
+  width: 100%;
+  border-radius: 50%;
+}
+.postImage{
+  width: 100%;
+  height: auto;
+}
+.postImage img{
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+.viwerAddsec{
+  height: 80px;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+.viwerAddsec1{
+  font-size: 25px;
+  padding-bottom: 8px;
+}
+.viwerAddsec1 span{
+  margin-right: 20px;
+  cursor: pointer;
+} 
+
+
+
 
 
 .suggestion{

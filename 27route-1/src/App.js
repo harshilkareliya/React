@@ -5,14 +5,19 @@ import React,{useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home';
 import AddPost from './AddPost';
+import Editpost from './Editpost';
 
 function App() {
 
-  const [posts, setposts] = useState([])
+  const [posts, setposts] = useState([{
+    id : 0,
+    title : 'this is starting',
+    discription : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo velit, asperiores, pariatur molestias dolor at ipsum dolores consequuntur quo consequatur ad quos. Dolore minus accusamus dignissimos, magni enim pariatur at?'
+  }])
 
   function addPost(title, disc){
     const newPost = {
-      id : Date().getTime,
+      id : new Date().getTime(),
       title : title,
       discription : disc
     }
@@ -21,8 +26,15 @@ function App() {
 
   function deletePost(id){
     setposts(posts.filter((e)=>(
-      e.id != id
+      e.id !== id
     )))
+  }
+
+  function editPost(id, title, discription){
+    let updatedPost = posts.map((e)=>(
+      e.id === id ? {...posts , title : title, discription : discription} : e
+    ))
+    setposts(updatedPost)
   }
 
   return (
@@ -31,6 +43,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home posts={posts} deletePost={deletePost}/>} ></Route>
           <Route path='/addpost' element={<AddPost addPost={addPost} />} ></Route>
+          <Route path='/edit/:id' element={<Editpost editPost={editPost} posts={posts} />} />
         </Routes>
       </div>
     </Router>
