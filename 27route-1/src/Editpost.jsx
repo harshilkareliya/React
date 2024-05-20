@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 
-function Editpost({editPost, posts}) {
-    const{id} = useParams()
-    let ans = posts.find(e=> e.id === parseInt(id))
+function Editpost({ editPost, posts }) {
+    const { id } = useParams()
+    let ans = posts.find(e => e.id === parseInt(id))
 
     const [title, settitle] = useState(ans.title)
     const [discription, setdiscription] = useState(ans.discription)
+    const [image, setImage] = useState(ans.img);
+
     const navigate = useNavigate()
 
-    function editPostthis(e) {        
+    function editPostthis(e) {
         e.preventDefault();
-        editPost(ans.id, title, discription)
+        editPost(ans.id, title, discription, image)
         navigate('/')
+    }
+    function handleImageChange(e) {
+        setImage(e.target.files[0]);
     }
     return (
         <div>
@@ -36,7 +41,14 @@ function Editpost({editPost, posts}) {
                                                     </div><br />
                                                     <div data-mdb-input-init className="form-outline">
                                                         <label className="form-label" htmlFor="firstName">Add Description</label>
-                                                        <textarea  className='form-control form-control-lg' value={discription} onChange={(e) => setdiscription(e.target.value)}></textarea>
+                                                        <textarea className='form-control form-control-lg' value={discription} onChange={(e) => setdiscription(e.target.value)}></textarea>
+                                                    </div><br />
+                                                    <div>
+                                                        <input
+                                                            type="file"
+                                                            className="form-control form-control-lg"
+                                                            onChange={handleImageChange}
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>

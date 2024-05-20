@@ -13,8 +13,8 @@ function MovieItem({ movie, deleteMovie, setEditMovie }) {
       <h2>{movie.title}</h2>
       <p>{movie.description}</p>
       <p>{movie.Quntaty}</p>
-      <button onClick={() => setEditMoviethis(movie)}>+</button>
-      <button onClick={() => deleteMovie(movie.id)}>-</button>
+      <button onClick={() => setEditMoviethis(movie)}>Edit</button>
+      <button onClick={() => deleteMovie(movie.id)}>Delete</button>
     </div>
   );
 }

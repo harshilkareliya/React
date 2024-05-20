@@ -9,17 +9,20 @@ import Editpost from './Editpost';
 
 function App() {
 
-  const [posts, setposts] = useState([{
-    id : 0,
-    title : 'this is starting',
-    discription : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo velit, asperiores, pariatur molestias dolor at ipsum dolores consequuntur quo consequatur ad quos. Dolore minus accusamus dignissimos, magni enim pariatur at?'
-  }])
+  const [posts, setposts] = useState([
+  //   {
+  //   id : 0,
+  //   title : 'this is starting',
+  //   discription : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo velit, asperiores, pariatur molestias dolor at ipsum dolores consequuntur quo consequatur ad quos. Dolore minus accusamus dignissimos, magni enim pariatur at?'
+  // }
+])
 
-  function addPost(title, disc){
+  function addPost(title, disc, image){
     const newPost = {
       id : new Date().getTime(),
       title : title,
-      discription : disc
+      discription : disc,
+      img : image
     }
     setposts([...posts, newPost])
   }
@@ -30,9 +33,9 @@ function App() {
     )))
   }
 
-  function editPost(id, title, discription){
+  function editPost(id, title, discription, image){
     let updatedPost = posts.map((e)=>(
-      e.id === id ? {...posts , title : title, discription : discription} : e
+      e.id === id ? {...posts , id : id, title : title, discription: discription,img : image} : e
     ))
     setposts(updatedPost)
   }
