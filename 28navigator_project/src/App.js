@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home';
-import MovieList from './MovieList';
+import MedicineList from './MedicineList';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -37,7 +37,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/' element={<Home addMovie={addMovie} editMovie={editMovie} updateMovie={updateMovie} />}></Route>
-          <Route path='/Movies' element={<MovieList movies={movies} deleteMovie={deleteMovie} setEditMovie={setEditMovie} />}/>
+          <Route path='/Movies' element={<MedicineList movies={movies} deleteMovie={deleteMovie} setEditMovie={setEditMovie} />}/>
         </Routes>
       </div>
     </Router>

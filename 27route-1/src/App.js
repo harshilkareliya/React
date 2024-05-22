@@ -9,13 +9,7 @@ import Editpost from './Editpost';
 
 function App() {
 
-  const [posts, setposts] = useState([
-  //   {
-  //   id : 0,
-  //   title : 'this is starting',
-  //   discription : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo velit, asperiores, pariatur molestias dolor at ipsum dolores consequuntur quo consequatur ad quos. Dolore minus accusamus dignissimos, magni enim pariatur at?'
-  // }
-])
+  const [posts, setposts] = useState([])
 
   function addPost(title, disc, image){
     const newPost = {

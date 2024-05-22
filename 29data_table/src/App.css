@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.productImage{
+    height: 400px;
+}
+
+
+.icon-dropdown {
+    top: 5px;
+    right: 10px;
+    z-index: 10; /* Ensure the icon is above other elements */
+
+  }
+  
+  .card {
+    position: relative; /* Make the card a positioning context */
+  }
+  
+  .productImage {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .dropdown-menu{
+    width: 10px;
+  }
+  .dropdown-item{
+    font-size: 25px;
+  }
+  

@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import MovieForm from './MovieForm';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import MovieForm from './MedicineForm';
 
 function Home({addMovie, editMovie, updateMovie}) {
-
-
     return (
         <div>
             <h1>Medicine Management</h1>

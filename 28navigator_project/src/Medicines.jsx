@@ -2,11 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function MovieItem({ movie, deleteMovie, setEditMovie }) {
+function Medicine({ movie, deleteMovie, setEditMovie }) {
     const navigate = useNavigate()
     function setEditMoviethis(movie){
         setEditMovie(movie)
-        navigate('/Movies')
+        navigate('/')
     }
   return (
     <div className="movie-item">
@@ -19,4 +19,4 @@ function MovieItem({ movie, deleteMovie, setEditMovie }) {
   );
 }
 
-export default MovieItem;
+export default Medicine;

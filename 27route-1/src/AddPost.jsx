@@ -8,14 +8,24 @@ function AddPost({ addPost }) {
   const navigate = useNavigate();
 
   function addPostHandler(e) {
-    e.preventDefault();
-    addPost(title, description, image);
-    navigate('/');
+    if (title.length === 0) {
+      alert('Please Enter Title')
+    }
+    else if (description.length === 0) {
+      alert('Please Enter Discription')
+    }
+    else {
+      e.preventDefault();
+      addPost(title, description, image);
+      navigate('/');
+    }
   }
 
   function handleImageChange(e) {
     setImage(e.target.files[0]);
   }
+
+
 
   return (
     <div>

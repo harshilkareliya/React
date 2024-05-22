@@ -1,7 +1,7 @@
 import React from 'react';
-import MovieItem from './MovieItem';
+import MovieItem from './Medicines';
 
-function MovieList({ movies, deleteMovie, setEditMovie }) {
+function MedicineList({ movies, deleteMovie, setEditMovie }) {
   return (
     <div>
       {movies.map((movie) => (
@@ -11,4 +11,4 @@ function MovieList({ movies, deleteMovie, setEditMovie }) {
   );
 }
 
-export default MovieList;
+export default MedicineList;

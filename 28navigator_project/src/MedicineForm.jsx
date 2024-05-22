@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function MovieForm({ addMovie, editMovie, updateMovie }) {
+function MedicineForm({ addMovie, editMovie, updateMovie }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [Quntaty, setQuntaty] = useState('');
@@ -44,9 +44,9 @@ function MovieForm({ addMovie, editMovie, updateMovie }) {
         <label>Quntaty </label>
         <input type="number" value={Quntaty} onChange={(e) => setQuntaty(e.target.value)} required/>
       </div>
-      <button type="submit">{editMovie ? 'Update' : 'Add'} Movie</button>
+      <button type="submit">{editMovie ? 'Update' : 'Add'} Medicine</button>
     </form>
   );
 }
 
-export default MovieForm;
+export default MedicineForm;
