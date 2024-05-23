@@ -4,19 +4,19 @@ import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function ShowProduct({ allProduct, editProduct, deleteProduct }) {
-
+function ShowProduct({ allProduct, deleteProduct }) {
     return (
-        <div className="container mt-5">
-            <div className="row">
+        <div className={`container mt-5 `}>
+            <div className={`row ${(allProduct.length < 3)?'justify-content-center' : ''}`} >
                 {allProduct.map((product, index) => (
                     <div key={index} className="col-md-4 mb-4">
+
                         <div className="card position-relative">
                             {product.productImage && (
                                 <img
-                                    src={URL.createObjectURL(product.productImage)}
-                                    className="card-img-top productImage"
-                                    alt={product.productName}
+                                src={URL.createObjectURL(product.productImage)}
+                                className="card-img-top productImage"
+                                alt={product.productName}
                                 />
                             )}
                             <div className="dropdown position-absolute icon-dropdown">
@@ -29,7 +29,7 @@ function ShowProduct({ allProduct, editProduct, deleteProduct }) {
                                 />
                                 <ul className="dropdown-menu" aria-labelledby={`dropdownMenuButton${index}`}>
                                     <li>
-                                        <Link to={`/edit/${product.id}`}>
+                                        <Link to={`/editproduct/${product.id}`}>
                                             <FaEdit
                                                 className="text-primary dropdown-item"
                                                 style={{ cursor: 'pointer' }}

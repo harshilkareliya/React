@@ -7,6 +7,7 @@ function EditProduct({editProduct, allProduct}) {
 
     const {id} = useParams()
     let thisproduct = allProduct.find(e => e.id === parseInt(id))
+    console.log(thisproduct)
 
     const [productName, setProductName] = useState(thisproduct.productName);
     const [productDescription, setProductDescription] = useState(thisproduct.productDescription);

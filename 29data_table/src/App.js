@@ -18,7 +18,7 @@ function App() {
 
   function editProduct(id,name,desc,price,cate,image){
     const updatedProducts = allProduct.map((e) => (
-      e.id === id ? {...allProduct, id:id,productName:name,productDescription:desc,productPrice:price,productCategory:cate,productImage:image}
+      e.id === id ? {...allProduct, id:id,productName:name,productDescription:desc,productPrice:price,productCategory:cate,productImage:image} : e
     ));
     setallProduct(updatedProducts);
   };
@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home allProduct={allProduct}  deleteProduct={deleteProduct} />} />
           <Route path='/addproduct' element={<AddProduct addProduct={addProduct} />} />
-          <Route path='/editproduct/:id' element={<EditProduct addProduct={addProduct} editProduct={editProduct} />} />
+          <Route path='/editproduct/:id' element={<EditProduct allProduct={allProduct} editProduct={editProduct} />} />
         </Routes>
       </div>
     </Router>
