@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-function Header() {
+function Header({search,setsearch}) {
 
-    const [search, setsearch] = useState('')
 
-    function handleSearch(){
-
-    }
+    // function handleSearch(e){
+    //     setsearch(e.target.value)
+    //     searchedProduct(search)
+    // }
 
     return (
         <div>
@@ -27,8 +27,8 @@ function Header() {
                             
                         </ul>
                         <div className="d-flex" >
-                            <input value={search} onChange={handleSearch} className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                                <button className="btn btn-outline-success" onClick={handleSearch} >Search</button>
+                            <input value={search} onChange={(e)=>setsearch(e.target.value)} className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                                {/* <button className="btn btn-outline-success"  >Search</button> */}
                         </div>
                     </div>
                 </div>

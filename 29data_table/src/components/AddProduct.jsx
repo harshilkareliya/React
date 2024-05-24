@@ -28,6 +28,7 @@ function AddProduct({ addProduct }) {
     return (
         <div>
             <Header />
+            
             <div className="addproduct container-fluid border">
                 <div className="row justify-content-center" id='row'>
                     <div className="col-lg-12">
@@ -95,8 +96,9 @@ function AddProduct({ addProduct }) {
                                             className="form-control"
                                             id="productImage"
                                             accept="image/*"
-                                            onChange={(e) => setProductImage(e.target.files[0])}
+                                            onChange={(e) => setProductImage([...e.target.files])}
                                             required
+                                            multiple
                                         />
                                     </div>
                                     <button type="submit" className="btn btn-primary">Add Product</button>
