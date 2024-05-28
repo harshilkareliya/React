@@ -1,11 +1,12 @@
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
+export const ADD = 'ADD'
+export const REMOVE = 'REMOVE'
 
-export const increment = () => ({
-    type : INCREMENT
+export const addMoney = () => ({
+    type : ADD
+    
 })
 
-export const decrement=()=>({
-    type : DECREMENT
+export const removeMoney = () => ({
+    type : REMOVE
+    
 })
-

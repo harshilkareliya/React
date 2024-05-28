@@ -1,21 +1,32 @@
-import { DECREMENT, INCREMENT } from "./action";
+import {ADD, REMOVE} from './action'
 
 const intialState = {
-    count : 0
+    money : 0
 }
 
-function counterReducer(state = intialState, action){
+const money300 = {
+    money300 : 0
+}
+
+
+function moneyReducer(state = intialState, action){
 
     switch(action.type){
 
-        case INCREMENT : return{
+        case 'ADD' : return {
             ...state,
-            count : state.count + 1
+            money : state.money + 500,
+            money300 : state.money300 + 300,
+            switch(state){
+                case '300' : return {
+                    
+                }
+            }
         }
         
-        case DECREMENT : return{
+        case 'REMOVE' : return {
             ...state,
-            count : state.count - 1
+            money : state.money - 500
         }
 
         default : return state
@@ -23,4 +34,4 @@ function counterReducer(state = intialState, action){
 
 }
 
-export default counterReducer
+export default moneyReducer
