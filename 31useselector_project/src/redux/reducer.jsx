@@ -4,29 +4,19 @@ const intialState = {
     money : 0
 }
 
-const money300 = {
-    money300 : 0
-}
-
-
 function moneyReducer(state = intialState, action){
 
     switch(action.type){
 
         case 'ADD' : return {
             ...state,
-            money : state.money + 500,
-            money300 : state.money300 + 300,
-            switch(state){
-                case '300' : return {
-                    
-                }
-            }
+            money : state.money + action.payload,
+            
         }
         
         case 'REMOVE' : return {
             ...state,
-            money : state.money - 500
+            money : state.money - action.payload
         }
 
         default : return state
