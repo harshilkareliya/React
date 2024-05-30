@@ -11,6 +11,19 @@
     height: 100vh;
     background-color: rgba(232, 230, 230, 0.504);
     transition: 1s ;
+    text-align: center;
+}
+
+#box{
+    border: 1px solid black;
+}
+
+.toggleSide .h2{
+    list-style: none;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
 }
 
 .icon{
