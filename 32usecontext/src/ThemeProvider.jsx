@@ -6,7 +6,7 @@ function ThemeProvider({children}) {
     const[theme, settheme] = useState('ligh')
 
     const toggleTheme = () =>{
-        settheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
+      settheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
     }
 
   return (
