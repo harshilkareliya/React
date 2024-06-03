@@ -1,20 +1,26 @@
 import { INCREMENT, DECREMENT } from "./action";
 
 
-const reducer = (action,state) => {
-    switch(action.type){
-        case INCREMENT : return {
+const reducer = ( state ,action) => {
+    switch (action.type) {
+        case INCREMENT: return {
             ...state,
-            prices : state.products.map(item => item.id === action.playload)
-            ? {...item , value : item.value + item.price}
-            : item 
+            products : state.products.map(item => 
+                item.id === action.payload
+                ? { ...item, value: item.value + item.price }
+                : item
+            )
         }
-        case DECREMENT : return {
+        case DECREMENT: return {
             ...state,
-            prices : state.products.map(item => item.id === action.playload)
-            ? {...item , value : item.value - item.price}
-            : item 
+            products : state.products.map(item => 
+                item.id === action.payload
+                ? { ...item, value: item.value - item.price }
+                : item
+            )
         }
+        default:
+            return state;
     }
 }
 

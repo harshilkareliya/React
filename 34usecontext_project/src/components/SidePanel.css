@@ -17,10 +17,12 @@
 #box{
     border: 1px solid black;
 }
+.toggleSide h2{
 
+    margin-bottom: 35px;
+}
 .toggleSide .h2{
     list-style: none;
-    margin-bottom: 30px;
     text-decoration: none;
     color: black;
     font-size: 30px;
@@ -33,3 +35,11 @@
     top: 45%;
     left: 1.6%;
 }
+.icons{
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 80px;
+}
+    .icons span{
+        margin-right: 13px;
+    }
