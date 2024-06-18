@@ -19,7 +19,7 @@ function SidePanel() {
     })
 
     return (
-        <div style={{ display: 'flex' }}>
+        <div className='sidepanel'>
             <div className='showside'>
                 <span className='icon' onClick={() => setshow(!show)}>
                     <HiOutlineMenuAlt1 />

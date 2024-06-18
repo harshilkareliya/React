@@ -1,13 +1,13 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
 import './App.css';
-import Instagram from './Instagram';
 
 function App() {
+  fetch('https://fakestoreapi.com/products')
+  .then(res => res.json())
+  .then(json => console.log(json))
+
   return (
     <div className="App">
-      <Instagram/>
+      
     </div>
   );
 }
