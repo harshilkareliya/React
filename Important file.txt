@@ -12,14 +12,11 @@ npm install react-icons --save
 **  Router      **
 npm i -D react-router-dom
 
---  Redux    **
-npm i redux react-redux
-
-
 **   Router  **
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-
+--  Redux    **
+npm i redux react-redux
 
 **  axios  **
 npm i axios 
@@ -29,4 +26,4 @@ npm i json-server
 
 
 **   Start json Server  **
-npx json-server --watch db.json --port 3000 
+npx json-server --watch db.json --port 8000 
