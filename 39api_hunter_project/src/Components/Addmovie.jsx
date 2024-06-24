@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Navbar from './Navbar'
 import './MovieForm.css';
 import axios from 'axios'
+
 function Addmovie() {
 
     const[newMovie, setnewMovie] = useState({
@@ -9,13 +10,16 @@ function Addmovie() {
         genre : '',
         director : '',
         releaseyear : '',
-        discription : ''
+        discription : '',
+        poster : null
     })
 
-    
-
     function handleChange(event){
-        setnewMovie({...newMovie, [event.target.name] : event.target.value})
+        if (event.target.name === 'poster') {
+            setnewMovie({ ...newMovie, poster: event.target.files[0] });
+        } else {
+            setnewMovie({...newMovie, [event.target.name] : event.target.value})
+        }
     }
 
     function handleSubmit(event){
@@ -54,21 +58,27 @@ function Addmovie() {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="year">Release Year</label>
-                                        <input type="number" name='releaseyear' onChange={handleChange} className="form-control" id="year" placeholder="Enter release year" required />
+                                        <input type="text" name='releaseyear' onChange={handleChange} className="form-control" id="year" placeholder="Enter release year" required />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="description">Description</label>
+                                        <label htmlFor="description">Discription</label>
                                         <textarea className="form-control" name='discription' onChange={handleChange} id="description" rows="3" placeholder="Enter brief description" required></textarea>
-                                    </div><br />
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="year">Poster</label>
+                                        <input type="file" name='poster' onChange={handleChange} className="form-control" id="year" required />
+                                    </div><br/>
                                     <button type="submit" className="btn btn-primary btn-block">Submit</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
 
         </div>
+
     )
 }
 
