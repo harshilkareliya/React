@@ -1,0 +1,23 @@
+.container {
+    margin-top: 50px;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .social-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+  }
+  
+  .social-login button .react-icons {
+    margin-right: 5px;
+  }
+  
