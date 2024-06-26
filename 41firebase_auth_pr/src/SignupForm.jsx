@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaGoogle, FaFacebook, FaGithub } from 'react-icons/fa';
-import { auth, facebookProvider } from './config';
+import { auth, facebookProvider, googleProvider } from './config';
 import { signInWithPopup } from 'firebase/auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SignupForm.css';
@@ -11,6 +11,7 @@ function SignupForm() {
     email: '',
     password: ''
   });
+  const [value, setValue] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,19 +29,37 @@ function SignupForm() {
 
   const handleSocialLogin = (platform) => {
     console.log(`Logging in with ${platform}`);
-    if (platform == 'Facebook') {
+    if (platform === 'Facebook') {
       signInWithPopup(auth, facebookProvider)
         .then((data) => {
-          const user = data.user
-
+          const user = data.user;
           const credential = facebookProvider.credentialFromResult(data);
           const accessToken = credential.accessToken;
-
-        }).catch((err) => {
-          alert(err)
+          // Handle successful login
         })
+        .catch((err) => {
+          alert(err);
+        });
+    }
+    if (platform === 'Google') {
+      signInWithPopup(auth, googleProvider)
+        .then((data) => {
+          setValue(data.user.email);
+          localStorage.setItem('email', data.user.email);
+          // Handle successful login
+        })
+        .catch((err) => {
+          alert(err);
+        });
     }
   };
+
+  useEffect(() => {
+    let userEmail = localStorage.getItem('email');
+    if (userEmail) {
+      setValue(userEmail);
+    }
+  }, []);
 
   return (
     <div className="container mt-5">
@@ -122,4 +141,5 @@ function SignupForm() {
     </div>
   );
 }
+
 export default SignupForm;
