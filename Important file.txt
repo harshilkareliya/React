@@ -21,10 +21,11 @@ npm i redux react-redux
 **  axios  **
 npm i axios 
 
+
 **   Create Json Server **
 npm i json-server
 
 
 **   Start json Server  **
-npx json-server --watch db.json --port 8000 
+npx json-server --watch db.json --port 8000
 
