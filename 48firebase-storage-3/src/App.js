@@ -3,7 +3,7 @@ import Display from './Display';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { database } from './Config';
-import { ref, set, onValue } from "firebase/database";
+import { ref, set, onValue, remove } from "firebase/database";
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -44,12 +44,24 @@ function App() {
     });
   }, [])
 
+  const handleDelete = (deleteId) =>{
+
+    const delRef = ref(database, `users/${deleteId}`)
+    remove(delRef)
+    .then(()=>{
+      alert('Delete data successfully')
+    }).catch(()=>{
+      alert('Not Delete')
+    })
+
+  }
+
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path='/' element={<AddData handleSubmit={handleSubmit} data={displayData} />}></Route>
-          <Route path='/data' element={<Display data={displayData} />}></Route>
+          <Route path='/data' element={<Display data={displayData} handleDelete={handleDelete} />}></Route>
         </Routes>
       </Router>
     </div>
