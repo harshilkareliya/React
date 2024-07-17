@@ -8,5 +8,28 @@
     background-color: #040714;
     color: white;
     display: flex;
+    position: relative;
 }
 
+.sideBar{
+    min-width: 10%;
+    position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: 1s;
+    /* border: 1px solid white; */
+}
+
+.sideBar:hover{
+    width: 25%;
+    /* background-color: #040714; */
+    background: linear-gradient(to right, rgba(4, 7, 20, 1), rgba(4, 7, 20, 0));
+}
+
+.main{
+    width: 90%;
+    position: absolute;
+    right: 0;
+}

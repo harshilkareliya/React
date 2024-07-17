@@ -5,7 +5,7 @@ import Movie from './Movie'
 function Home() {
   return (
     <div>
-      <MyVideoSlider/>
+      <MyVideoSlider/><br /><br />
       <Movie/>  
     </div>
   )
