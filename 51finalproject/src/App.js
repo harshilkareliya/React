@@ -1,3 +1,4 @@
+import React,{useEffect, useState} from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home'
@@ -8,10 +9,18 @@ import Movie from './Components/Movie'
 import Categories from './Components/Categories'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
 import Sidebar from './Components/Sidebar';
 
 function App() {
+
+  const [PopularMovies, setPopularMovies] = useState([])
+
+  useEffect(() => {
+    
+
+  },[])
+  
+
   return (
     <Router>
       <div className="App">

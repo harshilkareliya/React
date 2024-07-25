@@ -19,6 +19,7 @@ function Editpost({ editPost, posts }) {
     function handleImageChange(e) {
         setImage(e.target.files[0]);
     }
+    
     return (
         <div>
             <div>

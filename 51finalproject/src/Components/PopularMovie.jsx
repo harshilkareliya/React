@@ -37,25 +37,41 @@ function PopularMovie() {
     };
 
     return (
-        <div>
-            <h4>Popular Movies</h4>
-            <Slider {...settings}>
-                {movies.map(movie => (
-                    <div key={movie.id} className="movie-slide">
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}
-                            className="movie-image"
-                        />
-                        <div className="movie-overlay">
-                            <button className="watch-now-button">Watch Now</button>
-                            <h6 className="movie-title">{movie.title}</h6>
-                            <p className='movie-overview'>{movie.overview}</p>
+        <>
+            <div>
+                <h4>Popular Movies</h4>
+                <Slider {...settings}>
+                    {movies.map(movie => (
+                        <div key={movie.id} className="box">
+                            <img
+                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                                alt={movie.title}
+                                className="movie-image"
+                            />
+                            <div className="overbox">
+                                <button className="watch-now-button">Watch Now</button>
+                                <h6 className="movie-title">{movie.title}</h6>
+                                <p className='movie-overview'>{movie.overview}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </Slider>
-        </div>
+                    ))}
+                </Slider>
+                        {/* <div key={movie.id} className='box border border-2'>
+                            <img
+                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                                alt={movie.title}
+                                className="movie-image"
+                            />
+                            <div className="overbox border border-3">
+                                <p className='p-3'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum beatae nesciunt, minus dolore laborum repellendus dolor laboriosam vero quo veniam fugit, reiciendis asperiores recusandae! Impedit deleniti dolor similique autem ipsum!
+                                </p>
+                            </div>
+                        </div> */}
+            </div>
+
+        </>
+
     );
 }
 

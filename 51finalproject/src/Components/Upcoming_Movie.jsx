@@ -32,7 +32,7 @@ function UpcomingMovie() {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
         className: "center",
-        centerPadding: "5px"
+        centerPadding: "10px"
     };
 
     return (
