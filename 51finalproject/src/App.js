@@ -147,7 +147,7 @@ function App() {
               <i className="bi bi-music-note-list mx-3"></i>
               Rhythm Rider
             </h1>
-            <h3 className="py-5">Discover music in 30 seconds</h3>
+            <h3 className="py-5">Search Music Which you want to listen</h3>
             
           </div>
         </div>
