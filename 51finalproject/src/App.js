@@ -147,8 +147,17 @@ function App() {
               <i className="bi bi-music-note-list mx-3"></i>
               Rhythm Rider
             </h1>
-            <h3 className="py-5">Search Music Which you want to listen</h3>
-            
+            <h3 className="py-5">Discover music in 30 seconds</h3>
+            <div>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-outline-dark"
+                href="https://github.com/itsrj08/Rhythm-Rider"
+              >
+                <i className="bi bi-github mx-2"></i>Github
+              </a>
+            </div>
           </div>
         </div>
       </div>
